@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -57.7605, 158.548, 0, 0, 31.3373, 0.214639, 381.77, 159.775, 0, 0, 0, 0, 415.15, 192.073, 0, 0, 0, 29.4055, 415.917, 512.16, 0, 0, 0, 0, 448.741, 545.069, 0, 0, 0, 0, 1090.17, 545.285 )
+}
+
+[node name="Path1Map1" type="Path2D" index="0"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+curve = SubResource( 1 )
+
+[node name="Follow" type="PathFollow2D" parent="." index="0"]
+
+position = Vector2( -57.7605, 158.548 )
+rotation = 0.00279859
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+

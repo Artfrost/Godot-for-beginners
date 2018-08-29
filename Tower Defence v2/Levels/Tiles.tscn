@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/tile_atlas.png" type="Texture" id=1]
+
+[node name="Tiles" type="Node2D"]
+
+[node name="tile1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 375.675, 325.709 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 475.609, 323.858 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 562.588, 322.008 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 196, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 664.372, 320.157 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile5" type="Sprite" parent="." index="4"]
+
+position = Vector2( 745.799, 316.456 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 842.031, 316.456 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile7" type="Sprite" parent="." index="6"]
+
+position = Vector2( 940.114, 312.755 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile8" type="Sprite" parent="." index="7"]
+
+position = Vector2( 368.273, 421.941 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tile9" type="Sprite" parent="." index="8"]
+
+position = Vector2( 477.46, 423.792 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+

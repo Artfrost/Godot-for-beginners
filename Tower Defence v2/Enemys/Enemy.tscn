@@ -1,0 +1,83 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Enemys/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemys/orc_2.png" type="Texture" id=2]
+[ext_resource path="res://Enemys/orc_1.png" type="Texture" id=3]
+[ext_resource path="res://Enemys/orc_3.png" type="Texture" id=4]
+[ext_resource path="res://Enemys/orc_7.png" type="Texture" id=5]
+[ext_resource path="res://Enemys/orc_8.png" type="Texture" id=6]
+[ext_resource path="res://Enemys/orc_9.png" type="Texture" id=7]
+[ext_resource path="res://Enemys/orc_10.png" type="Texture" id=8]
+[ext_resource path="res://Enemys/orc_11.png" type="Texture" id=9]
+[ext_resource path="res://Enemys/orc_12.png" type="Texture" id=10]
+[ext_resource path="res://Enemys/orc_4.png" type="Texture" id=11]
+[ext_resource path="res://Enemys/orc_5.png" type="Texture" id=12]
+[ext_resource path="res://Enemys/orc_6.png" type="Texture" id=13]
+[ext_resource path="res://Enemys/health_bar.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "run_down",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run_left",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "run_up",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "run_right",
+"speed": 7.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Enemy" type="KinematicBody2D" index="0"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 0.515111, 2.03273 )
+scale = Vector2( 1.06797, 1.39657 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = SubResource( 2 )
+animation = "idle"
+playing = true
+
+[node name="health_bar" parent="." index="2" instance=ExtResource( 14 )]
+
+position = Vector2( 0.643906, 26.0099 )
+scale = Vector2( 0.350813, 1.01309 )
+z_index = 10
+z_as_relative = false
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+

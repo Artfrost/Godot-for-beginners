@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemys/health_bar.gd" type="Script" id=1]
+
+[node name="health_bar" type="Node2D"]
+
+scale = Vector2( 0.625, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="back" type="Line2D" parent="." index="0"]
+
+points = PoolVector2Array( -30, -40, 30, -40 )
+width = 2.0
+default_color = Color( 0, 0, 0, 1 )
+texture_mode = 15
+sharp_limit = 2.0
+round_precision = 8
+
+[node name="progress_line" type="Line2D" parent="." index="1"]
+
+points = PoolVector2Array( -30, -40, 30, -40 )
+width = 2.0
+default_color = Color( 0.832031, 0, 0, 1 )
+texture_mode = 15
+sharp_limit = 0.0
+round_precision = 1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
